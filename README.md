@@ -1,4 +1,11 @@
-# Product Management Agent Skill (v1)
+# 🧠 Product Management Agent Skill (v1)
+
+<p align="left">
+  <img src="https://img.shields.io/badge/version-v1.0.0-blue?style=flat-square" alt="Version"/>
+  <img src="https://img.shields.io/badge/skills.sh-compatible-10B981?style=flat-square" alt="skills.sh Compatible"/>
+  <img src="https://img.shields.io/badge/license-MIT-58A6FF?style=flat-square" alt="License"/>
+  <img src="https://img.shields.io/badge/supports-Claude%20Code%20%7C%20Cursor-D2A8FF?style=flat-square" alt="Compatible Clients"/>
+</p>
 
 ![PM Skill Architecture](./architecture.svg)
 
@@ -6,31 +13,31 @@ This repository contains a world-class, production-quality agent skill in the sk
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation & Setup
 
 > [!TIP]
-> Install the skill instantly in your workspace using the skills.sh CLI:
+> **Quick Start:** Install this skill directly in your active workspace using the skills.sh CLI:
 > ```bash
 > npx skills add rajann44/pm-skills
 > ```
-> *This skill is fully compatible with Claude Code, Cursor, Codex, and other skills.sh-compatible agent systems.*
+> *Compatible with Claude Code, Cursor, Codex, and other skills.sh-compatible agent environments.*
 
 ---
 
-## 📂 What's Inside
+## 📂 Capability Directory & Reference Files
 
 The entry point of this skill is [SKILL.md](./product-management/SKILL.md), which contains the main agent router and core execution principles. The router directs tasks to these deep-dive reference files using relative repository links:
 
-| Task Category | reference File Path | Description |
+| Task Category | reference File Path | Description / Key Focus |
 | :--- | :--- | :--- |
-| **Strategy & OKRs** | [strategy.md](./product-management/references/strategy.md) | ICP definition, DHM moats, and GEM sequencing |
-| **Customer Discovery** | [discovery.md](./product-management/references/discovery.md) | Continuous Discovery, OSTs, and the Mom Test |
-| **Execution & Cycles** | [execution.md](./product-management/references/execution.md) | Shape Up cycle scoping, RICE limits, and hill charts |
-| **Metrics & Growth** | [metrics-growth.md](./product-management/references/metrics-growth.md) | North Stars, Pirate Metrics (AARRR), and step-0/1 checks |
-| **Methodological Conflicts** | [conflicts.md](./product-management/references/conflicts.md) | Framework decision trees (e.g. Cagan vs. Shape Up) |
-| **Document Templates** | [artifacts-templates.md](./product-management/references/artifacts-templates.md) | PRDs, Opportunity Trees, and Customer Interview guides |
-| **Core Glossary** | [glossary.md](./product-management/references/glossary.md) | 22 canonical product management terms defined |
-| **Scope Limitations** | [limitations.md](./product-management/references/limitations.md) | v1 scope exclusions and workarounds |
+| **🎨 Strategy & OKRs** | [strategy.md](./product-management/references/strategy.md) | ICP definition, DHM moats, and GEM sequencing |
+| **🔍 Customer Discovery** | [discovery.md](./product-management/references/discovery.md) | Continuous Discovery, OSTs, and the Mom Test |
+| **🛠️ Execution & Cycles** | [execution.md](./product-management/references/execution.md) | Shape Up cycle scoping, RICE limits, and hill charts |
+| **📈 Metrics & Growth** | [metrics-growth.md](./product-management/references/metrics-growth.md) | North Stars, Pirate Metrics (AARRR), and step-0/1 checks |
+| **⚖️ Methodological Conflicts** | [conflicts.md](./product-management/references/conflicts.md) | Framework decision trees (e.g. Cagan vs. Shape Up) |
+| **📄 Document Templates** | [artifacts-templates.md](./product-management/references/artifacts-templates.md) | PRDs, Opportunity Trees, and Customer Interview guides |
+| **📖 Core Glossary** | [glossary.md](./product-management/references/glossary.md) | 22 canonical product management terms defined |
+| **🚫 Scope Limitations** | [limitations.md](./product-management/references/limitations.md) | v1 scope exclusions and workarounds |
 
 ---
 
@@ -38,7 +45,7 @@ The entry point of this skill is [SKILL.md](./product-management/SKILL.md), whic
 
 Every framework utilized in this skill is synthesized from canonical public product literature and explicitly credited:
 
-| Framework | Author / Primary Source | Source URL |
+| Core Framework | Author / Primary Source | Source Link |
 | :--- | :--- | :--- |
 | **Outcome Brief PRDs & OKRs** | Marty Cagan / SVPG | [svpg.com/articles](https://svpg.com/articles/) |
 | **DHM, GLEe, GEM Sequencing** | Gibson Biddle / ex-Netflix | [gibsonbiddle.com](https://www.gibsonbiddle.com) |
@@ -58,10 +65,14 @@ Every framework utilized in this skill is synthesized from canonical public prod
 > [!IMPORTANT]
 > This skill enforces four strict operational guardrails to prevent common AI product management anti-patterns:
 > 
-> *   **The Context Gate:** Every PRD, roadmap, or prioritization task must first establish the target customer (ICP), evidence base (citing telemetry or qualitative logs), and cycle constraints before proceeding.
-> *   **License to Say No:** Speculative or unbacked feature requests are met with substantive pushback, including specific assumptions, falsifiable kill criteria, a minified concept draft, and a CEO decision framework.
-> *   **GEM Strategy-Prioritization Alignment:** Features are prioritized based on their direct alignment with the active phase of the GEM roadmap (Engagement, Monetization, or Growth); strategic mismatches must be formally justified.
-> *   **Conflicts, Not Smoothies:** The skill explicitly prevents blending conflicting methodologies (e.g. Shape Up vs. Cagan PRDs) into a "smoothie"; it forces a clear selection and enforces its rules consistently.
+> *   `THE CONTEXT GATE`  
+>     Every PRD, roadmap, or prioritization task must first establish the target customer (ICP), evidence base (citing telemetry or qualitative logs), and cycle constraints before proceeding.
+> *   `LICENSE TO SAY NO`  
+>     Speculative or unbacked feature requests are met with substantive pushback, including specific assumptions, falsifiable kill criteria, a minified concept draft, and a CEO decision framework.
+> *   `GEM STRATEGY-PRIORITIZATION ALIGNMENT`  
+>     Features are prioritized based on their direct alignment with the active phase of the GEM roadmap (Engagement, Monetization, or Growth); strategic mismatches must be formally justified.
+> *   `CONFLICTS, NOT SMOOTHIES`  
+>     The skill explicitly prevents blending conflicting methodologies (e.g. Shape Up vs. Cagan PRDs) into a "smoothie"; it forces a clear selection and enforces its rules consistently.
 
 ---
 
