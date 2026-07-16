@@ -33,7 +33,7 @@ This repository contains a world-class, production-quality agent skill in the sk
 
 The entry point of this skill is [SKILL.md](./product-management/SKILL.md), which contains the main agent router and core execution principles. The router directs tasks to these deep-dive reference files using relative repository links:
 
-| Task Category | reference File Path | Description / Key Focus |
+| Task Category | Reference File Path | Description / Key Focus |
 | :--- | :--- | :--- |
 | **🎨 Strategy & OKRs** | [strategy.md](./product-management/references/strategy.md) | ICP definition, DHM moats, and GEM sequencing |
 | **🔍 Customer Discovery** | [discovery.md](./product-management/references/discovery.md) | Continuous Discovery, OSTs, and the Mom Test |
@@ -83,7 +83,7 @@ Every framework utilized in this skill is synthesized from canonical public prod
 
 ## 🛡️ Validation & Evidence Trail
 
-This skill has been hardened through 9 rigorous validation scenarios:
+This skill has been hardened through 10 rigorous validation scenarios:
 1.  **[Scenario 1: Team Workspaces PRD](./validation/scenario-1.md)** - Applies the Minimum Evidence Weight rule to scale cycle appetites.
 2.  **[Scenario 2: 15% Activation Drop](./validation/scenario-2.md)** - Applies Step-0 telemetry error re-baselining and Step-1 shape analysis.
 3.  **[Scenario 3: B2B Startup Strategy](./validation/scenario-3.md)** - Defines Fintech ICP compliance stress-tests and GLEe exit criteria.
@@ -93,6 +93,7 @@ This skill has been hardened through 9 rigorous validation scenarios:
 7.  **[Scenario 7: Ambiguous Routing](./validation/scenario-7.md)** - Prompts user with 4 structured diagnostic questions rather than dumping templates.
 8.  **[Scenario 8: Conflicting Evidence](./validation/scenario-8.md)** - Resolves buyer vs. user needs for a $400k ARR feature request.
 9.  **[Scenario 9: Sunk Cost Evaluation](./validation/scenario-9.md)** - Evaluates a failing beta using Ship/Iterate/Kill options under PMF metrics warnings.
+10. **[Scenario 10: Context Gate Bypass (v2-backlog)](./validation/v2-backlog.md)** - Bypasses the Context Gate using the `[DRAFT-ONLY]` / `[SANDBOX]` sandbox trigger.
 
 *Logs of development gaps, spot-check reports, and before/after diffs are located in the [validation/](./validation/) directory.*
 

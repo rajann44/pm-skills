@@ -31,6 +31,8 @@ To validate these assumptions, we propose a 1-week discovery test before coding 
 | **Search Query Audit** | Analyze the database of searches. Count what percentage of queries are written in natural language (phrases) vs. single keywords. | **KILL** the project if natural language queries are **< 15%** of searches (anchored to 30% of our historical search queries; if less than half of this target segment writes in natural language, it indicates users think in keywords rather than conversational prompts). |
 | **Willingness to Pay (Pre-Sale)** | Send an email campaign offering early beta access to AI features for a $5/month add-on fee. Measure signups. | **KILL** the project if add-on pre-orders are **< 3%** of our active customer base (anchored to our historical new add-on trial benchmark of 3%; absent internal data, we assume this baseline is required to cover LLM server and operations costs). |
 
+*   **Proxy Hypothesis Mapping:** While the CEO requested a full conversational note-search chatbot, we are implementing an "AI Summarize" button as a low-latency, lower-cost proxy to test basic user interest in AI-powered note output. We explicitly acknowledge that a user who clicks "Summarize" may not want a chat interface (and vice versa); a positive result validates demand for automated note synthesis but does not validate the conversational search value proposition itself. We map the chatbot intent instead via the **Search Query Audit** (measuring how many users naturally type full questions vs. single keywords).
+
 ---
 
 ## 4. [EVIDENCE-FREE DRAFT] Genuinely Minified Concept
@@ -47,3 +49,4 @@ We should proceed with building a full version of this feature *only* if at leas
 1.  **Falsifiable Discovery Passes:** The fake-door CTR exceeds 12% AND pre-sale conversion exceeds 3%, demonstrating clear user demand and willingness to pay.
 2.  **Contractual Expansion Revenue:** An enterprise prospect representing **>$150,000 ARR** signs a Letter of Intent (LOI) to subscribe, contingent *only* on the delivery of SOC2-compliant note summaries.
 3.  **Monetization Strategic Pivot:** The board votes to pivot the company from a utility note tool to an enterprise knowledge-management agent, justifying a complete restructuring of our product roadmap.
+4.  **Middling Results (8%–12% CTR) - Iterate &amp; Re-test:** If the fake-door CTR falls between 8% and 12%, we enter a 7-day "Iterate &amp; Re-test" discovery phase. We will run 5 qualitative customer interviews to diagnose prompt and UI friction, redesign the entry point placement, and run a second 1-week test. We will not proceed to full build nor kill the project at this stage.

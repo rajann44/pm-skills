@@ -2,6 +2,9 @@
 
 This document maps the major debates and conflicting schools of thought in modern product management, providing clear decision criteria for when to apply each approach.
 
+> [!NOTE]
+> For the initial research notes on these methodological conflicts, see the predecessor file [disagreements.md](../../disagreements.md) in the repository root.
+
 ---
 
 ## TABLE OF CONTENTS

@@ -60,12 +60,12 @@ Before applying any strategic frameworks, you must define the **Ideal Customer P
 
 ## 4. The GEM Model & Sequencing Logic
 
-*   **Definition:** An alignment framework that forces an organization to prioritize and rank **Growth**, **Engagement** (retention), and **Monetization**.
-*   **Sequencing Logic:** Biddle argues for a default sequencing of **Engagement first, then Growth, then Monetization**:
-    1.  *Engagement (Retention) First:* Prove the product is good and has PMF. Growing a product with poor engagement is like pouring water into a leaky bucket.
-    2.  *Growth Second:* Scale the user base once retention is stable.
-    3.  *Monetization Third:* Extract economic value once scale is achieved.
-*   **Justifying Exceptions:** This default sequencing is overridden if the company is bootstrapped and requires immediate cash flow to survive, or in premium B2B enterprise SaaS where willingness to pay is the primary indicator of product value.
+*   **Definition:** An alignment framework (Biddle) that forces an organization to prioritize and rank **Growth**, **Engagement** (retention), and **Monetization** based on their specific business context. Biddle emphasizes that the relative ranking of these three metrics is a context-dependent exercise that evolves as a company matures.
+*   **Sequencing Logic:** While Biddle does not dictate a universal sequence, this skill implements a default strategic recommendation of **Engagement first, then Monetization, then Growth** for early-stage software products to ensure unit economics and retention loops are validated before scaling:
+    1.  *Engagement (Retention) First:* Prove the product is good and has product-market fit (PMF). Growing a product with poor engagement is like pouring water into a leaky bucket.
+    2.  *Monetization Second:* Verify unit economics and willingness to pay before committing capital to customer acquisition.
+    3.  *Growth Third:* Scale the user base once retention and monetization loops are validated.
+*   **Justifying Variations:** The product team must explicitly define and justify their current rank order. For example, a VC-funded consumer application might prioritize Growth before Monetization, whereas a bootstrapped SaaS company or a seed-stage startup with low runway must rank Monetization first to survive.
 *   **When to use:** Use this during quarterly or annual planning to align product, marketing, finance, and engineering leaders on the primary focus of the business.
 *   **When NOT to use:** Do not use to prioritize individual product features.
 *   **Worked Example:** Netflix in 2005 prioritized Monetization first to prove profitability to Wall Street during Blockbuster's price war.

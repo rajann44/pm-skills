@@ -2,6 +2,9 @@
 
 This document maps the major debates and conflicting schools of thought in modern product management, providing clear decision criteria for when to apply each approach.
 
+> [!NOTE]
+> This file contains the initial Phase 1 research notes and methodological conflicts. For the active, operational decision tree and routing rules used by the agent skill during execution, refer to [product-management/references/conflicts.md](./product-management/references/conflicts.md).
+
 ---
 
 ## 1. Process & Scope: Shape Up vs. Traditional PRDs
