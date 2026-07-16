@@ -1,52 +1,56 @@
-# Validation Scenario 10: Context Gate Bypass (v2-backlog)
+# Deferred Feature Design: Automatic Stakes-Tiering (v2-backlog)
 
-This artifact represents the validation scenario for the `[DRAFT-ONLY]` and `[SANDBOX]` Context Gate bypass. It demonstrates how developers can bypass strict evidence weight requirements to quickly draft speculative backlog tickets.
-
----
-
-## 1. User Request (With Bypass Tag)
-> **User Prompt:** `[DRAFT-ONLY] Write a standard product spec for a direct integration with Slack. We want note sharing and channel updates.`
+This document contains the product design for the **Automatic Stakes-Tiering** mechanism. It is genuinely deferred as a backlog item for the v2 release of the `product-management` agent skill.
 
 ---
 
-## 2. Agent Execution & Gate Evaluation
+## 1. Strategic Context & Rationale
 
-1.  **Bypass Tag Detection:** The agent scans the prompt and detects the `[DRAFT-ONLY]` tag.
-2.  **Context Gate Bypass:** The agent suspends the requirement to establish a strategic ICP, evidence base (e.g. 5 interviews), or company stage constraints.
-3.  **Substantive Pushback Bypass:** The agent skips the "License to Say No" pushback flow (speculative assumptions, falsifiable kill criteria, CEO decision framework).
-4.  **Reference Routing:** The agent loads `./references/execution.md` and `./references/artifacts-templates.md` for standard spec conventions.
-5.  **Output Generation:** The agent directly outputs the product spec, clearly labeled with the bypass banner.
+In the v1 release, we implemented the manual `[DRAFT-ONLY]` / `[SANDBOX]` tags to solve Context Gate friction. This allows developers to explicitly tell the agent when to bypass the strict evidence-weight checks and substantive pushbacks.
+
+However, relying on manual tags has a usability risk: users may forget to prepend tags, leading to frustrating pushbacks on simple tasks. In v2, if user telemetry triggers the conditions below, we will replace the manual tag with an **Automatic Stakes-Tiering Classifier** directly in `SKILL.md`.
 
 ---
 
-## 3. Agent Output Spec
+## 2. Trigger Conditions (Usage Evidence)
 
-### [DRAFT-ONLY / SANDBOX BYPASS ACTIVE]
-
-# Product Spec: Slack Direct Integration
-
-*   **Status:** Draft / Sandbox Mode
-*   **Description:** Allows users to share notes directly to Slack channels and receive automated channel updates when collaborative notes are updated.
+We will pull the deferred auto-stakes-tiering design from the backlog and prioritize it for active development if usage logs show either of the following signals over a 30-day period:
+1.  **Incorrect Interrogations (> 15%):** More than 15% of simple, low-risk requests (e.g., standard CSS fixes, copy changes, or tasks requiring < 30 lines of code) incorrectly trigger the Context Gate interrogation or License to Say No pushback because the user omitted the manual bypass tag.
+2.  **User Friction Reports:** Direct user feedback indicates that entering a dialogue with the agent on simple backlog grooming is the primary source of tool adoption friction.
 
 ---
 
-## 1. Feature Specifications
+## 3. Auto-Stakes-Tiering Proposed Architecture
 
-### 1.1 "Send to Slack" Note Action
-*   **UI:** Add a "Send to Slack" action in the note sharing menu.
-*   **Behavior:**
-    1.  User clicks "Send to Slack".
-    2.  An OAuth popup requests permission to access the target Slack workspace (if not already authenticated).
-    3.  User selects a channel from a searchable dropdown.
-    4.  Note text is sent as a rich unfurled block in Slack.
+When triggered, the main `SKILL.md` router will automatically classify incoming prompts into one of two stakes-based tiers before executing the task:
 
-### 1.2 Channel Activity Updates
-*   **Behavior:**
-    1.  If a collaborative note is edited by team members, a threaded reply is posted to the original Slack block summarizing the changes.
-    2.  Frequency limit: Maximum 1 update post per channel per 5 minutes to prevent spamming.
+```
+                  ┌─────────────────────────┐
+                  │    User Prompt Input    │
+                  └────────────┬────────────┘
+                               │
+                [Auto-Stakes Classifier]
+                               │
+            ┌──────────────────┴──────────────────┐
+            ▼                                     ▼
+     [Low-Stakes Tier]                    [High-Stakes Tier]
+   Appetite &lt; 2 Weeks                 Appetite &gt; 2 Weeks OR
+    Styling, Copy, Docs                 Strategic Roadmap/PRD
+            │                                     │
+            ▼                                     ▼
+  [Bypass Context Gate]                 [Enforce Context Gate]
+  Direct Draft Output                    Evidence Check &amp; ICP
+                                         License to Say No
+```
 
----
+### 3.1 Low-Stakes Tier (Auto-Bypass)
+*   **Classification Criteria:**
+    *   The prompt targets styling, layout, copy text, minor script refactoring, or localized unit test fixes.
+    *   The implied development effort is clearly under **2 weeks** of appetite (e.g., single-file modifications).
+*   **Behavior:** The Context Gate is automatically bypassed. The agent immediately outputs the draft or refactors the code without requesting strategic context or discovery evidence.
 
-## 2. Technical Scope Boundaries
-*   No support for direct messaging (DMs); channel posts only.
-*   No support for multi-workspace mapping; one note workspace links to one Slack workspace.
+### 3.2 High-Stakes Tier (Strict Gate)
+*   **Classification Criteria:**
+    *   The prompt requests a new product feature, core database schema modification, payment gateway integration, strategic roadmap planning, or PRD drafting.
+    *   The implied development effort is **> 2 weeks** (or is unspecified but describes a major initiative).
+*   **Behavior:** The Context Gate is strictly enforced. The agent must verify the ICP, Strategy focus, and evidence weights, executing a **Substantive Pushback** if the evidence is insufficient.

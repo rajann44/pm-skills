@@ -93,7 +93,7 @@ This skill has been hardened through 10 rigorous validation scenarios:
 7.  **[Scenario 7: Ambiguous Routing](./validation/scenario-7.md)** - Prompts user with 4 structured diagnostic questions rather than dumping templates.
 8.  **[Scenario 8: Conflicting Evidence](./validation/scenario-8.md)** - Resolves buyer vs. user needs for a $400k ARR feature request.
 9.  **[Scenario 9: Sunk Cost Evaluation](./validation/scenario-9.md)** - Evaluates a failing beta using Ship/Iterate/Kill options under PMF metrics warnings.
-10. **[Scenario 10: Context Gate Bypass (v2-backlog)](./validation/v2-backlog.md)** - Bypasses the Context Gate using the `[DRAFT-ONLY]` / `[SANDBOX]` sandbox trigger.
+10. **[Scenario 10: Context Gate Bypass &amp; Risk Warning (Adversarial Chatbot)](./validation/scenario-10.md)** - Bypasses the blocking pushback on the Scenario 6 Chatbot request using the `[DRAFT-ONLY]` trigger, verifying that inline `[ASSUMPTION]` labels and the &gt;2 week build Risk Note still survive the bypass.
 
 *Logs of development gaps, spot-check reports, and before/after diffs are located in the [validation/](./validation/) directory.*
 
