@@ -7,6 +7,8 @@
   <img src="https://img.shields.io/badge/supports-Claude%20Code%20%7C%20Cursor-D2A8FF?style=flat-square" alt="Compatible Clients"/>
 </p>
 
+[![skills.sh](https://skills.sh/b/rajann44/pm-skills)](https://skills.sh/rajann44/pm-skills)
+
 ![PM Skill Architecture](./architecture.svg)
 
 This repository contains a world-class, production-quality agent skill in the skills.sh / Anthropic `SKILL.md` format. It equips AI coding assistants (such as Claude Code, Cursor, and other compatible systems) with expert-level product leadership capabilities to write outcome-oriented PRDs, build strategic roadmaps, prioritize backlogs objectively, and diagnose complex metrics drops.
