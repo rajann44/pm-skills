@@ -1,6 +1,8 @@
 # Product Management Agent Skill (v1)
 
-This repository contains a world-class, production-quality agent skill in the skills.sh / Anthropic `SKILL.md` format. It is designed to equip agentic coding assistants (such as Claude Code, Cursor, and other compatible systems) with senior product leadership capabilities (ex-Netflix/ex-SVPG caliber) to write outcome-oriented PRDs, build strategic roadmaps, prioritize backlogs objectively, and diagnose complex metrics drops.
+![PM Skill Architecture](./architecture.svg)
+
+This repository contains a world-class, production-quality agent skill in the skills.sh / Anthropic `SKILL.md` format. It is designed to equip agentic coding assistants (such as Claude Code, Cursor, and other compatible systems) with expert-level product leadership capabilities to write outcome-oriented PRDs, build strategic roadmaps, prioritize backlogs objectively, and diagnose complex metrics drops.
 
 ---
 
