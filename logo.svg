@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 140" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="800" height="140" fill="#09090B" stroke="#27272A" stroke-width="1" rx="6"/>
+
+  <!-- Logo Mark (Abstract Geometric Workflow) -->
+  <g transform="translate(45, 30)">
+    <!-- Main outer circle -->
+    <circle cx="40" cy="40" r="32" fill="none" stroke="#27272A" stroke-width="2"/>
+    <!-- Overlapping workflow paths -->
+    <path d="M 20 40 A 20 20 0 0 1 60 40" fill="none" stroke="#E4E4E7" stroke-width="2"/>
+    <path d="M 40 20 A 20 20 0 0 1 40 60" fill="none" stroke="#71717A" stroke-width="2.5"/>
+    <circle cx="40" cy="40" r="6" fill="#10B981"/>
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(145, 50)">
+    <!-- Title -->
+    <text x="0" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#F4F4F5" letter-spacing="1.5">PRODUCT MANAGEMENT</text>
+    <!-- Subtitle -->
+    <text x="0" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#71717A" letter-spacing="2">DECENTRALIZED AGENT SKILL / v1.0.0</text>
+  </g>
+
+  <!-- Trust Badges (Right Side) -->
+  <g transform="translate(595, 48)">
+    <!-- Audited Pill -->
+    <rect x="0" y="0" width="160" height="24" rx="12" fill="#18181B" stroke="#27272A" stroke-width="1"/>
+    <circle cx="16" cy="12" r="4" fill="#10B981"/>
+    <text x="30" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#E4E4E7" letter-spacing="0.5">SECURITY AUDITED</text>
+    
+    <!-- Verified Source Pill -->
+    <rect x="0" y="32" width="160" height="24" rx="12" fill="#18181B" stroke="#27272A" stroke-width="1"/>
+    <circle cx="16" cy="44" r="4" fill="#58A6FF"/>
+    <text x="30" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#E4E4E7" letter-spacing="0.5">VERIFIED SOURCE</text>
+  </g>
+</svg>

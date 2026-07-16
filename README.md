@@ -1,4 +1,4 @@
-# 🧠 Product Management Agent Skill (v1)
+![Product Management Agent Skill](./logo.svg)
 
 <p align="left">
   <img src="https://img.shields.io/badge/version-v1.0.0-blue?style=flat-square" alt="Version"/>
