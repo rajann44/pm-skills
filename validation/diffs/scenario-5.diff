@@ -1,0 +1,40 @@
+--- validation/diffs/scenario-5-before.md
++++ validation/scenario-5.md
+@@ -7,7 +7,8 @@
+ ---
+ 
+ ## 1. Context Gate (Mandatory)
+-*   **Strategy Context / ICP:** B2B Analytics Startup (from Scenario 3) targeting Fintech mid-market BI teams. Active strategy is **Monetization First** to secure runway and prove willingness to pay.
++*   **Strategy Context / ICP:** B2B Analytics Startup targeting Fintech mid-market BI teams. Active prioritization focus is **Monetization First**.
++    *   *GEM Strategy Alignment Check:* The long-term product strategy (Scenario 3) ranks GEM as Engagement-first. However, due to a seed stage runway constraint (4 months remaining), we are pivoting to Monetization-first for this cycle to secure near-term ARR and survive. This mismatch is justified by our immediate viability constraints.
+ *   **Evidence Base:** Citing warehouse cost savings metrics reports and IT admin security request logs.
+ *   **Stage & Constraints:** Seed stage, 2 developers, 1 designer, fixed 6-week cycle appetite.
+ 
+@@ -20,7 +21,7 @@
+ | Feature | Strategic Impact | Effort / Cost | Evidence Citation |
+ | :--- | :--- | :--- | :--- |
+ | **SSO Support** | High | Medium | [Citing Security Request Log Doc L1 showing 3 enterprise deals blocked on SSO] |
+-| **Stripe Billing Integration** | High | Low | [Citing Finance checkout drop-off metrics report showing manual invoice friction] |
++| **Mobile Push Notifications** | Medium | Low | [Citing user onboarding funnel analytics showing 30% higher Day-7 retention when push is enabled] |
+ | **Slack Notifications** | Low-Medium | Low | **[ASSUMPTION]** (No customer interviews have requested this yet) |
+ | **Dark Mode** | Low | Low | **[ASSUMPTION]** (Voted on public forum but no correlation to sales) |
+ | **CSV Export** | Medium | Low | [Citing active session logs showing 40% of users manual-copy data] |
+@@ -32,15 +33,15 @@
+ 
+ ## 3. Capacity & Appetite Check
+ *   *Capacity constraint:* 2 developers, 1 designer, 6-week appetite.
+-*   *Selection:* We cannot build all "High Impact" features in one cycle. We fund **SSO Support** and **Stripe Billing** for the next cycle (fits the 6-week developer appetite). **Real-Time Collaboration** requires a technical spike and is moved to "Next" for discovery.
++*   *Selection:* We cannot build all "High Impact" features in one cycle. We fund **SSO Support** (High strategic value unblocking 3 deals) and **Mobile Push Notifications** (Medium strategic value, extremely low cost/effort, high onboarding impact) for the next cycle (fits the 6-week developer appetite). **Real-Time Collaboration** requires a technical spike and is moved to "Next" for discovery.
+ 
+ ---
+ 
+ ## 4. Now/Next/Later Roadmap
+ 
+-Structured around customer opportunities and outcomes without calendar dates. Refer to the templates in `../product-management/references/artifacts-templates.md#7-nownextlater-roadmap-template`.
++Structured around customer opportunities and outcomes without calendar dates. Refer to the templates in `../product-management/references/artifacts-templates.md#7-nownextlater-roadmap-template`.
+ 
+ | Time Horizon | Initiative / Customer Opportunity | Target Outcome OKR | Evidence Citation |
+ | :--- | :--- | :--- | :--- |
+-| **NOW** (Active Dev) | **SSO Support & Stripe Billing**: Resolve enterprise security blocker and billing checkout friction. | Unblock 3 target enterprise sales and automate checkout conversion. | [Citing Security Request Log L1 and Finance checkout metrics] |
++| **NOW** (Active Dev) | **SSO Support & Mobile Push Notifications**: Resolve enterprise security blocker and improve early user retention. | Unblock 3 target enterprise sales and increase Day-7 retention by 10%. | [Citing Security Request Log L1 and onboarding analytics] |
+ | **NEXT** (Discovery) | **Real-Time Collaboration**: Shape query-sharing and collaborative folders workflow. | Increase workspace sharing interactions by 20%. | [Citing User Interview Report L3] |

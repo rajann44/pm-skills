@@ -1,0 +1,65 @@
+--- validation/diffs/scenario-6-before.md
++++ validation/scenario-6.md
+@@ -9,16 +9,22 @@
+ 
+ ---
+ 
+-## 2. License to Say No: Strategic Recommendation
+-> [!WARNING]
+--**Recommendation: Run a 1-Week Discovery Phase First.**
+--Building an AI chatbot is highly speculative and presents significant value and viability risks. We recommend running a lightweight, non-functional discovery test (such as a sidebar fake-door button or customer interviews) to validate demand before committing engineering resources.
+-
+-Refer to the conflicts reference in `../product-management/references/conflicts.md#3-discovery-scale-continuous-discovery-vs-classic-mvp` to see the trade-offs of micro-discovery.
+-
+----
+-
+-## 3. Minimal Draft [EVIDENCE-FREE DRAFT]
+-
+-If leadership decides to proceed with initial validation, here is the minified draft of the shaped concept:
+-
+-*   **Project Name:** AI Chatbot Assistant
+-*   **Appetite:** 2 weeks (Small Batch)
+-*   **Target Opportunity:** "I struggle to search and summarize my old notes." (Assuming this is the core value opportunity).
+-*   **Solution Boundary (Breadboard):** `[Sidebar Chat Link] -> (Click) -> [Chat Drawer] -> (Enter prompt) -> [Show AI note summary]`
+-*   **Explicit Out of Bounds:**
+-    *   No custom model fine-tuning (rely strictly on standard API endpoints).
+-    *   No collaborative chat history storage.
+-    *   No document-generation capabilities (restricted to reading and summarizing existing notes only).
+-
+-### Four Product Risks of this Draft:
+-1.  **Value Risk (High):** Will users interact with a chatbot, or do they prefer standard search? We will test this by placing a mock "Chat with Notes" button in the UI and measuring Click-Through Rate.
+-2.  **Feasibility Risk (Medium):** Latency of note indexing and LLM API response times.
+-3.  **Viability Risk (High):** LLM API token costs. We must establish a daily token limit per user to avoid cost runaways.
+-4.  **Usability Risk (Medium):** LLM hallucinations or confusing chat box UI elements.
++## 2. Substantive Pushback & Specific Assumptions
++We recommend against writing a full PRD at this stage. Instead, we must validate these four specific unvalidated assumptions:
++1.  **Value Assumption:** Users prefer typing natural language prompts in a chat window over using standard keyword search and folder tags to find notes.
++2.  **Viability Assumption:** The monthly API token cost of LLM inference is low enough to fit within our $8/month user subscription margins.
++3.  **Feasibility Assumption:** We can index and retrieve 10,000+ notes dynamically without introducing UI lag or mobile app crashes.
++4.  **Usability Assumption:** Users can write clear prompts that yield high-quality note summaries without encountering AI hallucinations.
++
++---
++
++## 3. 1-Week Discovery Plan & Falsifiable Kill Criteria
++To validate these assumptions, we propose a 1-week discovery test before coding the backend:
++
++| Discovery Activity | Metric / Goal | **Falsifiable Kill Criterion** |
++| :--- | :--- | :--- |
++| **Fake-Door Test** | Place an "AI Summarize" button in the note sidebar. Measure Click-Through Rate (CTR) over 7 days. | **KILL** the project if CTR is **< 8%** (anchored to 50% of our median entry-point CTR of 16% for other new features; we assume 8% is the minimum viable interest threshold to justify the API token cost - revisit after first measurement). |
++| **Search Query Audit** | Analyze the database of searches. Count what percentage of queries are written in natural language (phrases) vs. single keywords. | **KILL** the project if natural language queries are **< 15%** of searches (anchored to 30% of our historical search queries; if less than half of this target segment writes in natural language, it indicates users think in keywords rather than conversational prompts). |
++| **Willingness to Pay (Pre-Sale)** | Send an email campaign offering early beta access to AI features for a $5/month add-on fee. Measure signups. | **KILL** the project if add-on pre-orders are **< 3%** of our active customer base (anchored to our historical new add-on trial benchmark of 3%; absent internal data, we assume this baseline is required to cover LLM server and operations costs). |
++
++---
++
++## 4. [EVIDENCE-FREE DRAFT] Genuinely Minified Concept
++*   **UI:** A static text drawer that slides in from the right when the "Summarize" button is clicked.
++*   **Core Logic:** Feeds selected note text to the OpenAI GPT-4o API with a static system prompt to return a 3-bullet summary.
++*   **Limits:** 5 summaries per user per day. No conversational history (no back-and-forth chat); no document generation.
++
++---
++
++## 5. CEO Positive Decision Framework
++We should proceed with building a full version of this feature *only* if at least one of these strategic conditions is met:
++1.  **Falsifiable Discovery Passes:** The fake-door CTR exceeds 12% AND pre-sale conversion exceeds 3%, demonstrating clear user demand and willingness to pay.
++2.  **Contractual Expansion Revenue:** An enterprise prospect representing **>$150,000 ARR** signs a Letter of Intent (LOI) to subscribe, contingent *only* on the delivery of SOC2-compliant note summaries.
++3.  **Monetization Strategic Pivot:** The board votes to pivot the company from a utility note tool to an enterprise knowledge-management agent, justifying a complete restructuring of our product roadmap.
