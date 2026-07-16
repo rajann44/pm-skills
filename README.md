@@ -1,7 +1,7 @@
 [![Product Management Agent Skill](./logo-v1.svg)](https://www.skills.sh/rajann44/pm-skills/product-management)
 
 <p align="left">
-  <img src="https://img.shields.io/badge/version-v1.0.0-blue?style=flat-square" alt="Version"/>
+  <img src="https://img.shields.io/badge/version-v1.0.2-blue?style=flat-square" alt="Version"/>
   <img src="https://img.shields.io/badge/skills.sh-compatible-10B981?style=flat-square" alt="skills.sh Compatible"/>
   <img src="https://img.shields.io/badge/license-MIT-58A6FF?style=flat-square" alt="License"/>
   <img src="https://img.shields.io/badge/supports-Claude%20Code%20%7C%20Cursor-D2A8FF?style=flat-square" alt="Compatible Clients"/>
