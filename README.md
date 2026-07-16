@@ -1,4 +1,4 @@
-![Product Management Agent Skill](./logo-v1.svg)
+[![Product Management Agent Skill](./logo-v1.svg)](https://www.skills.sh/rajann44/pm-skills/product-management)
 
 <p align="left">
   <img src="https://img.shields.io/badge/version-v1.0.0-blue?style=flat-square" alt="Version"/>
