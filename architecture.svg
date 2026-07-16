@@ -1,91 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="100%">
   <!-- Background -->
-  <rect width="800" height="450" rx="16" fill="#0D1117" stroke="#30363D" stroke-width="2"/>
-  
-  <!-- Grid Accent (Subtle) -->
-  <path d="M 0,50 L 800,50 M 0,100 L 800,100 M 0,150 L 800,150 M 0,200 L 800,200 M 0,250 L 800,250 M 0,300 L 800,300 M 0,350 L 800,350 M 0,400 L 800,400" stroke="#1F242C" stroke-width="1"/>
-  <path d="M 100,0 L 100,450 M 200,0 L 200,450 M 300,0 L 300,450 M 400,0 L 400,450 M 500,0 L 500,450 M 600,0 L 600,450 M 700,0 L 700,450" stroke="#1F242C" stroke-width="1"/>
+  <rect width="800" height="280" fill="#09090B" stroke="#27272A" stroke-width="1"/>
 
-  <!-- Title -->
-  <text x="30" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="#F0F6FC">PM SKILL ARCHITECTURE &amp; FLOW</text>
-  <text x="30" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#8B949E">skills.sh / Anthropic compliant task router and gating flow</text>
+  <!-- Left Column: Input -->
+  <g transform="translate(40, 50)">
+    <!-- Header -->
+    <text x="0" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#A1A1AA" letter-spacing="1">01 / INPUT</text>
+    <rect x="0" y="35" width="180" height="150" fill="#18181B" stroke="#27272A" stroke-width="1" rx="4"/>
+    
+    <!-- Input Fields -->
+    <text x="15" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#F4F4F5">User Product Task</text>
+    <text x="15" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#71717A">e.g., "Draft a workspaces PRD,"</text>
+    <text x="15" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#71717A">"Prioritize my backlog," or</text>
+    <text x="15" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#71717A">"Diagnose activation drop"</text>
+    
+    <!-- Input Trigger Indicator -->
+    <rect x="15" y="140" width="150" height="28" fill="#27272A" rx="3"/>
+    <text x="90" y="157" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#F4F4F5" text-anchor="middle" letter-spacing="0.5">PM TRIGGER INITIATED</text>
+  </g>
 
-  <!-- Flow Arrows (Connector Paths) -->
-  <!-- Input to Router -->
-  <path d="M 140,225 L 210,225" stroke="#58A6FF" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="4 4"/>
-  <!-- Router to Context Gate -->
-  <path d="M 330,225 L 390,225" stroke="#58A6FF" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Context Gate to Ref Files (Branching) -->
-  <path d="M 510,225 L 530,225 C 550,225 550,140 570,140 L 580,140" stroke="#58A6FF" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 510,225 L 530,225 C 550,225 550,310 570,310 L 580,310" stroke="#58A6FF" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 510,225 L 580,225" stroke="#58A6FF" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Flow Arrow 1 -->
+  <path d="M 235,140 L 285,140" stroke="#3F3F46" stroke-width="1.5" fill="none" marker-end="url(#arrow-head)"/>
 
-  <!-- Define Markers -->
+  <!-- Center Column: Router & Gate -->
+  <g transform="translate(300, 50)">
+    <text x="0" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#A1A1AA" letter-spacing="1">02 / ROUTER &amp; GATE</text>
+    <rect x="0" y="35" width="200" height="150" fill="#18181B" stroke="#3F3F46" stroke-width="1" rx="4"/>
+    
+    <!-- Router Header -->
+    <text x="15" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#F4F4F5">SKILL.md Task Router</text>
+    <text x="15" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#A1A1AA">Routes to relative references</text>
+    
+    <line x1="15" y1="95" x2="185" y2="95" stroke="#27272A" stroke-width="1"/>
+    
+    <!-- Context Gate Check -->
+    <text x="15" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#10B981">Context Gate Check:</text>
+    <text x="25" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#E4E4E7">✔ Target ICP Defined</text>
+    <text x="25" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#E4E4E7">✔ Evidence Base Verified</text>
+    <text x="25" y="169" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#E4E4E7">✔ Team Runway Constraints</text>
+  </g>
+
+  <!-- Flow Arrow 2 (Branching paths) -->
+  <path d="M 515,140 C 535,140 535,80 555,80 H 565" stroke="#3F3F46" stroke-width="1.5" fill="none" marker-end="url(#arrow-head)"/>
+  <path d="M 515,140 L 565,140" stroke="#3F3F46" stroke-width="1.5" fill="none" marker-end="url(#arrow-head)"/>
+  <path d="M 515,140 C 535,140 535,200 555,200 H 565" stroke="#3F3F46" stroke-width="1.5" fill="none" marker-end="url(#arrow-head)"/>
+
+  <!-- Right Column: Reference Engines -->
+  <g transform="translate(580, 50)">
+    <text x="0" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#A1A1AA" letter-spacing="1">03 / REF ENGINES</text>
+    
+    <!-- Card 1: Strategy & Discovery -->
+    <rect x="0" y="35" width="180" height="40" fill="#18181B" stroke="#27272A" stroke-width="1" rx="4"/>
+    <text x="12" y="52" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#F4F4F5">strategy.md &amp; discovery.md</text>
+    <text x="12" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#71717A">DHM Moats | Mom Test Interviews</text>
+    
+    <!-- Card 2: Execution & Conflicts -->
+    <rect x="0" y="95" width="180" height="40" fill="#18181B" stroke="#27272A" stroke-width="1" rx="4"/>
+    <text x="12" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#F4F4F5">execution.md &amp; conflicts.md</text>
+    <text x="12" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#71717A">Shape Up | Prioritization Theater</text>
+    
+    <!-- Card 3: Metrics & Growth -->
+    <rect x="0" y="155" width="180" height="40" fill="#18181B" stroke="#27272A" stroke-width="1" rx="4"/>
+    <text x="12" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#F4F4F5">metrics-growth.md</text>
+    <text x="12" y="185" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#71717A">Step-0/1 Metrics Re-baselining</text>
+  </g>
+
+  <!-- Markers -->
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#58A6FF"/>
+    <marker id="arrow-head" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3F3F46"/>
     </marker>
-    <!-- Gradients -->
-    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1F6FEB"/>
-      <stop offset="100%" stop-color="#58A6FF"/>
-    </linearGradient>
-    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8957E5"/>
-      <stop offset="100%" stop-color="#D2A8FF"/>
-    </linearGradient>
-    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#238636"/>
-      <stop offset="100%" stop-color="#3FB950"/>
-    </linearGradient>
   </defs>
-
-  <!-- Node 1: User Request -->
-  <rect x="30" y="175" width="110" height="100" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
-  <text x="85" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="middle">User Request</text>
-  <text x="85" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#8B949E" text-anchor="middle">PRD, Strategy,</text>
-  <text x="85" y="245" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#8B949E" text-anchor="middle">Roadmap, Churn</text>
-
-  <!-- Node 2: Main SKILL.md Router -->
-  <rect x="210" y="175" width="120" height="100" rx="8" fill="url(#blueGrad)" stroke="#58A6FF" stroke-width="1.5"/>
-  <text x="270" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SKILL.md</text>
-  <text x="270" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Task Router</text>
-  <rect x="230" y="248" width="80" height="16" rx="4" fill="#0D1117" opacity="0.6"/>
-  <text x="270" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="bold" fill="#58A6FF" text-anchor="middle">RELATIVE LINKS</text>
-
-  <!-- Node 3: The Context Gate -->
-  <rect x="390" y="150" width="120" height="150" rx="8" fill="#161B22" stroke="#D2A8FF" stroke-width="2"/>
-  <text x="450" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#D2A8FF" text-anchor="middle">CONTEXT GATE</text>
-  <line x1="400" y1="185" x2="500" y2="185" stroke="#30363D" stroke-width="1"/>
-  <!-- Checklist items inside gate -->
-  <circle cx="410" cy="205" r="3" fill="#3FB950"/>
-  <text x="422" y="209" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#C9D1D9">Target ICP</text>
-  <circle cx="410" cy="230" r="3" fill="#3FB950"/>
-  <text x="422" y="234" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#C9D1D9">Evidence Base</text>
-  <circle cx="410" cy="255" r="3" fill="#3FB950"/>
-  <text x="422" y="259" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#C9D1D9">Runway Stage</text>
-  <circle cx="410" cy="280" r="3" fill="#3FB950"/>
-  <text x="422" y="284" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="bold" fill="#F85149">Say "No" if Spec</text>
-
-  <!-- Reference Files (Deep Dives) -->
-  <!-- Top: Strategy & Discovery -->
-  <rect x="580" y="90" width="180" height="70" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
-  <text x="590" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#F0F6FC">strategy.md &amp; discovery.md</text>
-  <text x="590" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#8B949E">DHM Moats | GLEe Exit Metrics</text>
-  <text x="590" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#8B949E">Mom Test | Prompt Friction</text>
-
-  <!-- Middle: Execution & Conflicts -->
-  <rect x="580" y="190" width="180" height="70" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
-  <text x="590" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#F0F6FC">execution.md &amp; conflicts.md</text>
-  <text x="590" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#8B949E">Shape Up Scoping | RICE Limits</text>
-  <text x="590" y="242" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#8B949E">Conflicts Decision Tree</text>
-
-  <!-- Bottom: Metrics & Growth -->
-  <rect x="580" y="290" width="180" height="70" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
-  <text x="590" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#F0F6FC">metrics-growth.md</text>
-  <text x="590" y="328" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#8B949E">Step-0/1 Re-baselining</text>
-  <text x="590" y="342" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#8B949E">Funnel Separation (AARRR)</text>
-
-  <!-- Bottom Footnote -->
-  <text x="400" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#8B949E" text-anchor="middle">Artifact outputs include: Outcome Briefs, Shaped Pitches, Opportunity Trees, and Substantive Pushbacks.</text>
 </svg>
