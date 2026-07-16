@@ -13,11 +13,13 @@
   </g>
 
   <!-- Typography -->
-  <g transform="translate(145, 50)">
+  <g transform="translate(145, 42)">
     <!-- Title -->
     <text x="0" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#F4F4F5" letter-spacing="1.5">PRODUCT MANAGEMENT</text>
     <!-- Subtitle -->
-    <text x="0" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#71717A" letter-spacing="2">DECENTRALIZED AGENT SKILL / v1.0.0</text>
+    <text x="0" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#10B981" letter-spacing="2">AVAILABLE ON SKILLS.SH / v1.0.0</text>
+    <!-- Secondary promising info -->
+    <text x="0" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#71717A" letter-spacing="1">9 HARDENED SCENARIOS / ZERO RUNTIME DEPENDENCIES</text>
   </g>
 
   <!-- Trust Badges (Right Side) -->
@@ -25,11 +27,11 @@
     <!-- Audited Pill -->
     <rect x="0" y="0" width="160" height="24" rx="12" fill="#18181B" stroke="#27272A" stroke-width="1"/>
     <circle cx="16" cy="12" r="4" fill="#10B981"/>
-    <text x="30" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#E4E4E7" letter-spacing="0.5">SECURITY AUDITED</text>
+    <text x="30" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#E4E4E7" letter-spacing="0.5">9/9 TESTS PASSED</text>
     
     <!-- Verified Source Pill -->
     <rect x="0" y="32" width="160" height="24" rx="12" fill="#18181B" stroke="#27272A" stroke-width="1"/>
     <circle cx="16" cy="44" r="4" fill="#58A6FF"/>
-    <text x="30" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#E4E4E7" letter-spacing="0.5">VERIFIED SOURCE</text>
+    <text x="30" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#E4E4E7" letter-spacing="0.5">SECURITY AUDITED</text>
   </g>
 </svg>
