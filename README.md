@@ -2,38 +2,39 @@
 
 ![PM Skill Architecture](./architecture.svg)
 
-This repository contains a world-class, production-quality agent skill in the skills.sh / Anthropic `SKILL.md` format. It is designed to equip agentic coding assistants (such as Claude Code, Cursor, and other compatible systems) with expert-level product leadership capabilities to write outcome-oriented PRDs, build strategic roadmaps, prioritize backlogs objectively, and diagnose complex metrics drops.
+This repository contains a world-class, production-quality agent skill in the skills.sh / Anthropic `SKILL.md` format. It equips AI coding assistants (such as Claude Code, Cursor, and other compatible systems) with expert-level product leadership capabilities to write outcome-oriented PRDs, build strategic roadmaps, prioritize backlogs objectively, and diagnose complex metrics drops.
 
 ---
 
-## Installation
+## 🚀 Installation
 
-Install the skill in your workspace using the skills.sh CLI:
-```bash
-npx skills add rajann44/pm-skills
-```
-*Note: This skill is fully compatible with Claude Code, Cursor, Codex, and other skills.sh-compatible agent systems.*
+> [!TIP]
+> Install the skill instantly in your workspace using the skills.sh CLI:
+> ```bash
+> npx skills add rajann44/pm-skills
+> ```
+> *This skill is fully compatible with Claude Code, Cursor, Codex, and other skills.sh-compatible agent systems.*
 
 ---
 
-## What's Inside
+## 📂 What's Inside
 
 The entry point of this skill is [SKILL.md](./product-management/SKILL.md), which contains the main agent router and core execution principles. The router directs tasks to these deep-dive reference files using relative repository links:
 
-| Task Category | reference File Path |
-| :--- | :--- |
-| **Strategy & OKRs** | [strategy.md](./product-management/references/strategy.md) |
-| **Customer Discovery** | [discovery.md](./product-management/references/discovery.md) |
-| **Execution & Cycles** | [execution.md](./product-management/references/execution.md) |
-| **Metrics & Growth** | [metrics-growth.md](./product-management/references/metrics-growth.md) |
-| **Methodological Conflicts** | [conflicts.md](./product-management/references/conflicts.md) |
-| **Document Templates** | [artifacts-templates.md](./product-management/references/artifacts-templates.md) |
-| **Core Glossary** | [glossary.md](./product-management/references/glossary.md) |
-| **Scope Limitations** | [limitations.md](./product-management/references/limitations.md) |
+| Task Category | reference File Path | Description |
+| :--- | :--- | :--- |
+| **Strategy & OKRs** | [strategy.md](./product-management/references/strategy.md) | ICP definition, DHM moats, and GEM sequencing |
+| **Customer Discovery** | [discovery.md](./product-management/references/discovery.md) | Continuous Discovery, OSTs, and the Mom Test |
+| **Execution & Cycles** | [execution.md](./product-management/references/execution.md) | Shape Up cycle scoping, RICE limits, and hill charts |
+| **Metrics & Growth** | [metrics-growth.md](./product-management/references/metrics-growth.md) | North Stars, Pirate Metrics (AARRR), and step-0/1 checks |
+| **Methodological Conflicts** | [conflicts.md](./product-management/references/conflicts.md) | Framework decision trees (e.g. Cagan vs. Shape Up) |
+| **Document Templates** | [artifacts-templates.md](./product-management/references/artifacts-templates.md) | PRDs, Opportunity Trees, and Customer Interview guides |
+| **Core Glossary** | [glossary.md](./product-management/references/glossary.md) | 22 canonical product management terms defined |
+| **Scope Limitations** | [limitations.md](./product-management/references/limitations.md) | v1 scope exclusions and workarounds |
 
 ---
 
-## Framework & Source Attribution Matrix
+## 🏆 Framework & Source Attribution Matrix
 
 Every framework utilized in this skill is synthesized from canonical public product literature and explicitly credited:
 
@@ -52,16 +53,19 @@ Every framework utilized in this skill is synthesized from canonical public prod
 
 ---
 
-## Core Design Principles (4 Bullets)
+## 🧠 Core Design Principles
 
-*   **The Context Gate:** Every PRD, roadmap, or prioritization task must first establish the target customer (ICP), evidence base (citing telemetry or qualitative logs), and cycle constraints before proceeding.
-*   **License to Say No:** Speculative or unbacked feature requests are met with substantive pushback, including specific assumptions, falsifiable kill criteria, a minified concept draft, and a CEO decision framework.
-*   **GEM Strategy-Prioritization Alignment:** Features are prioritized based on their direct alignment with the active phase of the GEM roadmap (Engagement, Monetization, or Growth); strategic mismatches must be formally justified.
-*   **Conflicts, Not Smoothies:** The skill explicitly prevents blending conflicting methodologies (e.g. Shape Up vs. Cagan PRDs) into a "smoothie"; it forces a clear selection and enforces its rules consistently.
+> [!IMPORTANT]
+> This skill enforces four strict operational guardrails to prevent common AI product management anti-patterns:
+> 
+> *   **The Context Gate:** Every PRD, roadmap, or prioritization task must first establish the target customer (ICP), evidence base (citing telemetry or qualitative logs), and cycle constraints before proceeding.
+> *   **License to Say No:** Speculative or unbacked feature requests are met with substantive pushback, including specific assumptions, falsifiable kill criteria, a minified concept draft, and a CEO decision framework.
+> *   **GEM Strategy-Prioritization Alignment:** Features are prioritized based on their direct alignment with the active phase of the GEM roadmap (Engagement, Monetization, or Growth); strategic mismatches must be formally justified.
+> *   **Conflicts, Not Smoothies:** The skill explicitly prevents blending conflicting methodologies (e.g. Shape Up vs. Cagan PRDs) into a "smoothie"; it forces a clear selection and enforces its rules consistently.
 
 ---
 
-## Validation & Evidence Trail
+## 🛡️ Validation & Evidence Trail
 
 This skill has been hardened through 9 rigorous validation scenarios:
 1.  **[Scenario 1: Team Workspaces PRD](./validation/scenario-1.md)** - Applies the Minimum Evidence Weight rule to scale cycle appetites.
@@ -78,11 +82,13 @@ This skill has been hardened through 9 rigorous validation scenarios:
 
 ---
 
-## Known Limitations
+## ⚠️ Known Limitations
 
-This skill has three deliberate v1 scope limitations:
-1.  **GTM & Pricing:** Out of scope for v1.
-2.  **Technical Platform Trade-offs:** Out of scope for v1.
-3.  **Consumer Growth loops & Virality:** Out of scope for v1.
-
-*For details on scope exclusions and workarounds, refer to [limitations.md](./product-management/references/limitations.md).*
+> [!WARNING]
+> This skill has three deliberate v1 scope limitations. If your task falls into these categories, the router will declare the limits and fallback to general principles:
+> 
+> 1.  **Go-To-Market (GTM) & Pricing Strategy:** Out of scope for v1 (Future sibling: `pm-gtm-pricing`).
+> 2.  **Technical Strategy & Platform Trade-offs:** Out of scope for v1 (Future sibling: `pm-technical-strategy`).
+> 3.  **Consumer Growth Loops & Virality:** Out of scope for v1 (Future sibling: `pm-consumer-growth`).
+> 
+> *For details on scope exclusions and workarounds, refer to [limitations.md](./product-management/references/limitations.md).*
