@@ -20,7 +20,7 @@ This repository contains a world-class, production-quality agent skill in the sk
 > [!TIP]
 > **Quick Start:** Install this skill directly in your active workspace using the skills.sh CLI:
 > ```bash
-> npx skills add rajann44/pm-skills
+> npx skills add https://github.com/rajann44/pm-skills --skill product-management
 > ```
 > *Compatible with Claude Code, Cursor, Codex, and other skills.sh-compatible agent environments.*
 
