@@ -62,7 +62,7 @@ review my decision journal
 *   `[RESOLVED FROM WORKSPACE: product/strategy.md (Last updated: YYYY-MM-DD)]`
     Appears when Context Gate loads strategy context automatically from workspace files.
 *   `[WARNING: Workspace strategy.md is >90 days old and may be stale. Run 'initialize workspace state' to update.]`
-    Appears when the strategy context file is >90 days older than the current date (`2026-07-18`).
+    Appears when the strategy context file is >90 days older than the current environment date.
 *   `[STRATEGIC CONTRADICTION DETECTED: Mismatch with focus '<Focus>' in product/strategy.md. Please provide a formal strategic justification or run 'initialize workspace state' to pivot strategy.]`
     Fires when a request contradicts the active strategic focus (e.g. Monetization focus vs. Growth request).
 *   `[ASSUMPTION]`

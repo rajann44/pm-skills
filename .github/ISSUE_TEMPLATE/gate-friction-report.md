@@ -23,7 +23,8 @@ assignees: rajann44
 - [ ] The implied build effort was < 2 weeks.
 - [ ] Other (please describe):
 
-### 4. Code / Change Scope
-*Approximately how many files or lines of code did this change modify?*
-- Files modified:
-- Lines of code:
+### 4. Build Appetite
+*What was the estimated development effort for this request?*
+- [ ] < 2 weeks (Small Batch)
+- [ ] 2–6 weeks (Big Batch)
+- [ ] Unclear

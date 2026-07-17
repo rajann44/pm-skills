@@ -39,7 +39,7 @@ Before writing any PRD, strategy, roadmap, or prioritization output, you **MUST*
 2.  **Load Active Workspace Files:** Search for `product/strategy.md` and `product/bets.md` in the workspace.
 3.  **Silent Gate Resolution & Citation:** If found, extract the strategy focus, ICP, and cycle constraints. In the output header, cite the loaded file:
     `[RESOLVED FROM WORKSPACE: product/strategy.md (Last updated: YYYY-MM-DD)]` (fill in the file's last modified date).
-4.  **Staleness Check:** Compare the strategy file's last updated date with the current date (current local time is `2026-07-18`). If the difference is **> 90 days**, append a prominent warning to the citation header:
+4.  **Staleness Check:** Compare the strategy file's last updated date with the current date from your environment. If the difference is **> 90 days**, append a prominent warning to the citation header:
     `[WARNING: Workspace strategy.md is >90 days old and may be stale. Run 'initialize workspace state' to update.]`
 5.  **Strategic Contradiction Check:** Compare the feature or prioritization request with the active strategic focus defined in `product/strategy.md` (e.g., if focus is set to "Engagement" but the request targets "Monetization"). If a mismatch exists, output:
     `[STRATEGIC CONTRADICTION DETECTED: Mismatch with focus '<Focus>' in product/strategy.md. Please provide a formal strategic justification or run 'initialize workspace state' to pivot strategy.]`

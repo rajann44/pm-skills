@@ -96,7 +96,7 @@ The agent will ask a few setup questions and generate two files under a new `pro
 ### How Workspace Loading Changes Behavior
 Once these files exist, the skill loads them automatically. When you request a PRD or roadmap priority:
 1.  **Header Citation:** The output is prepended with:
-    `[RESOLVED FROM WORKSPACE: product/strategy.md (Last updated: 2026-07-18)]`
+    `[RESOLVED FROM WORKSPACE: product/strategy.md (Last updated: YYYY-MM-DD)]`
 2.  **Staleness Alert:** If `product/strategy.md` has not been updated in **> 90 days**, the header displays:
     `[WARNING: Workspace strategy.md is >90 days old and may be stale. Run 'initialize workspace state' to update.]`
 3.  **Contradiction Block:** If you ask for a feature that contradicts the focus in `product/strategy.md` (e.g. asking for a monetization upsell while focus is set to "Engagement"), the agent halts and surfaces:
