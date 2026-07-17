@@ -124,7 +124,7 @@ If filesystem capabilities are absent in the host environment, the skill automat
 *   **Expected Output:**
     *   **Step-0 Instrumentation Check:** Isolating pipeline measurement errors to calculate the *residual real change*.
     *   **Step-1 Shape Analysis:** Classifying the drop shape (Step-Change vs. Gradual Trend).
-    *    separate funnel categorization (Activation vs. Retention vs. Referral).
+    *   Separate funnel categorization (Activation vs. Retention vs. Referral).
 
 ### Workflow C: Plan & Run Customer Discovery
 *   **When to use:** Drafting interview questions and testing opportunities.
@@ -169,7 +169,7 @@ If filesystem capabilities are absent in the host environment, the skill automat
 
 ## 6. Getting Better Answers (Power Usage)
 
-1.  **Cites Telemetry Proactively:** If you provide quantitative telemetry (e.g. "18% of cohort sessions drop at step 3") or interview counts in your prompt, the Context Gate automatically bypasses interrogation and scales cycle appetites to 6 weeks.
+1.  **Cites Telemetry Proactively:** Provide evidence counts proactively (e.g., '12 of 20 interviews mentioned X') and the gate accepts them without asking — evidence at or above the bar qualifies the request for larger cycle appetites.
 2.  **Declare Your School:** Force-skip conflicts detours by explicitly naming your preference: `Use Marty Cagan outcome briefs` or `Use Shape Up cycle templates`.
 3.  **Resolve Your Journal:** Keep `product/decisions.md` honest. Update actual outcomes even (especially) when predictions fail. The calibration Retro is only as accurate as its record.
 4.  **Debate the Kill Criteria:** When the agent pushes back with falsifiable kill criteria, argue the metrics or thresholds in your response to refine the discovery plan, rather than re-prompting.
