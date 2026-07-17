@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <!-- Window Container -->
+  <rect width="800" height="450" fill="#0F172A" stroke="#1E293B" stroke-width="1.5" rx="10"/>
+
+  <!-- macOS Window Header Bar -->
+  <path d="M 1,10 Q 1,1 10,1 L 790,1 Q 799,1 799,10 L 799,32 L 1,32 Z" fill="#1E293B" stroke="#1E293B" stroke-width="1"/>
+  
+  <!-- Traffic Light Window Controls (🔴 🟡 🟢) -->
+  <circle cx="20" cy="16" r="5.5" fill="#FF5F56"/>
+  <circle cx="38" cy="16" r="5.5" fill="#FFBD2E"/>
+  <circle cx="56" cy="16" r="5.5" fill="#27C93F"/>
+
+  <!-- Window Header Title -->
+  <text x="400" y="20" font-family="SF Mono, Fira Code, Monaco, Consolas, monospace" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">terminal — rajann44/pm-skills — 80×24</text>
+
+  <!-- Terminal Session Log -->
+  <g font-family="SF Mono, Fira Code, Monaco, Consolas, monospace" font-size="12.5" font-weight="500" letter-spacing="0.2">
+    <!-- Run 1: Interrogation -->
+    <text x="25" y="60" fill="#38BDF8">user$</text>
+    <text x="75" y="60" fill="#F8FAFC">npx skills add https://github.com/rajann44/pm-skills --skill product-management</text>
+    <text x="25" y="80" fill="#34D399">✓ Skill 'product-management' successfully added to active workspace.</text>
+
+    <text x="25" y="115" fill="#38BDF8">user$</text>
+    <text x="75" y="115" fill="#F8FAFC">Write a PRD for a Slack Integration.</text>
+
+    <text x="25" y="135" fill="#F87171">[GATE ACTIVE] Establishing strategy and evidence constraints before proceeding:</text>
+    <text x="40" y="155" fill="#94A3B8">▸ What is the target customer (ICP) and strategic focus for this cycle?</text>
+    <text x="40" y="175" fill="#94A3B8">▸ What qualitative interviews (bar: &gt;= 5) or telemetry supports this?</text>
+    <text x="40" y="195" fill="#94A3B8">▸ What is your cycle appetite (e.g., 2 weeks or 6 weeks)?</text>
+
+    <!-- Run 2: Setup -->
+    <text x="25" y="235" fill="#38BDF8">user$</text>
+    <text x="75" y="235" fill="#F8FAFC">initialize workspace state</text>
+    <text x="25" y="255" fill="#34D399">✓ Created product/strategy.md (Focus: Engagement / ICP: Series A store managers)</text>
+    <text x="25" y="275" fill="#34D399">✓ Created product/bets.md (Appetite: 2-Week Small Batch)</text>
+
+    <!-- Run 3: Silent Resolution -->
+    <text x="25" y="315" fill="#38BDF8">user$</text>
+    <text x="75" y="315" fill="#F8FAFC">Write a PRD for a Slack Integration.</text>
+    
+    <text x="25" y="340" fill="#60A5FA">[RESOLVED FROM WORKSPACE: product/strategy.md (Last updated: 2026-07-18)]</text>
+    
+    <text x="25" y="365" fill="#E2E8F0"># PRD Draft: Slack Integration</text>
+    <text x="25" y="385" fill="#94A3B8">Target Segment: Series A store managers [RESOLVED]</text>
+    <text x="25" y="405" fill="#94A3B8">Strategic Focus: Engagement [RESOLVED]</text>
+    <text x="25" y="425" fill="#34D399">✓ Output spec generated successfully. prediction logged in product/decisions.md.</text>
+  </g>
+</svg>

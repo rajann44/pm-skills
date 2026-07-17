@@ -23,6 +23,12 @@ Add the skill to your active workspace directory by running:
 npx skills add https://github.com/rajann44/pm-skills --skill product-management
 ```
 
+#### No Terminal? No Problem (Claude Desktop & Web UIs)
+If you do not use Claude Code or Cursor in a terminal, you can easily load the skill into Claude Desktop Projects, custom GPTs, or Co-workers:
+1.  **Upload Core Files:** Create a new Claude Project or custom GPT, and upload `product-management/SKILL.md` along with the contents of the `product-management/references/` folder as project knowledge documents.
+2.  **Upload Workspace State:** Upload your local strategy files (`product/strategy.md` and `product/bets.md`—see Section 3 below) directly as active project documents. The agent will read them automatically to resolve the Context Gate.
+
+
 ### Step 2: Try Your First Prompt
 Run the following prompt in your agent environment:
 > **Prompt:** `Help me prioritize these 4 features for my SaaS app: 1. Dark Mode, 2. CSV Export, 3. Slack Integration, 4. Audit Logs.`

@@ -23,7 +23,9 @@ This repository contains a world-class, production-quality agent skill in the sk
 > ```
 > *Compatible with Claude Code, Cursor, Codex, and other skills.sh-compatible agent environments.*
 > 
-> 📖 **New here?** Read the [User Guide](./GUIDE.md) for detailed workflows, copy-paste prompts, and setup commands.
+> 📖 **New here?** Read the [User Guide](./GUIDE.md) or check out the quick [Cheat Sheet](./CHEATSHEET.md).
+>
+> ![Terminal Interaction Demo](./demo.svg)
 
 *   **Registry Page:** [skills.sh/rajann44/pm-skills](https://www.skills.sh/rajann44/pm-skills)
 *   **Documentation Page:** [skills.sh/rajann44/pm-skills/product-management](https://www.skills.sh/rajann44/pm-skills/product-management)
