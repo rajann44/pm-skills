@@ -54,6 +54,27 @@ This log tracks the rubrics, identified gaps, applied fixes, and before/after de
 3.  **Isolates Problem**: Guides the user to identify the specific area of concern first.
 4.  **Relative Paths**: Only relative repository links are used.
 
+### Scenario 11: Silent Gate Resolution
+1.  **Workspace File Loading**: Detects and reads `product/strategy.md` to load strategic focus, ICP, and stage.
+2.  **Output Header Citation**: Prepends a header citation mapping the loaded file name and its last updated date.
+3.  **Staleness Check**: Computes strategy date age vs. `2026-07-18`, appending a warning if age is > 90 days.
+4.  **Strategic Focus Check**: Verifies that the requested feature is aligned with the loaded strategy focus.
+5.  **Relative Paths**: Only relative repository links are used.
+
+### Scenario 12: Decision Journal Calibration Retro
+1.  **Loads Journal**: Reads `product/decisions.md` containing past decisions.
+2.  **Small-Sample Rule Enforced**: If resolved decisions are < 10, disables all statistical percentages and Brier score.
+3.  **Qualitative Analysis**: Evaluates optimism bias (predicted vs. actual) and sunk cost violations (ignored kill criteria).
+4.  **Takeaway Tips**: Outputs 2–3 specific, actionable calibration takeaways.
+5.  **Relative Paths**: Only relative repository links are used.
+
+### Scenario 13: Strategic Mismatch / Contradiction Warning
+1.  **Loads Strategy**: Reads `product/strategy.md` to find the active focus.
+2.  **Mismatched Focus Detected**: Compares the request with the focus and flags a contradiction.
+3.  **Surfaces Contradiction**: Outputs a Strategic Contradiction warning in the header.
+4.  **Action Options**: Provides clear options to proceed (strategic justification, pivot strategy, or sandbox bypass).
+5.  **Relative Paths**: Only relative repository links are used.
+
 ---
 
 ## 2. LOGGED GAPS

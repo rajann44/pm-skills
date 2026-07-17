@@ -20,6 +20,7 @@ Before executing a task, check the router table below and load the relevant refe
 | Write a PRD/spec, prioritize a backlog, shape features, or plan a cycle | `./references/execution.md` |
 | Define a North Star metric, investigate growth/activation, or analyze cohorts | `./references/metrics-growth.md` |
 | Solve methodological disagreements or choose between conflicting schools | `./references/conflicts.md` |
+| Analyze or review the Decision Journal calibration (retro) | `./references/decisions-retro.md` |
 | Find templates for PRDs, strategy documents, interview guides, roadmaps, etc. | `./references/artifacts-templates.md` |
 | Look up product management terminology and best-source attributions | `./references/glossary.md` |
 | **Multi-File Tasks:** Build a product roadmap or coordinate strategy with execution | Both `./references/strategy.md` and `./references/execution.md` |
@@ -31,12 +32,24 @@ Before executing a task, check the router table below and load the relevant refe
 ## 2. THE CONTEXT GATE & LICENSE TO SAY NO
 
 ### The Context Gate
-Before writing any PRD, strategy, roadmap, or prioritization output, you **MUST** establish or assume the following three inputs. If they are not provided by the user, you must **ASK** for them or explicitly state your assumed defaults inline (never invent scores or ratings silently):
+Before writing any PRD, strategy, roadmap, or prioritization output, you **MUST** establish or assume the target customer/ICP, strategic focus, and capacity/appetite constraints.
+
+#### Living Workspace State (Automated Gate Resolution)
+1.  **Filesystem Access Check:** Check if filesystem capabilities are active. If absent, fall back directly to standard in-memory interrogation/defaults.
+2.  **Load Active Workspace Files:** Search for `product/strategy.md` and `product/bets.md` in the workspace.
+3.  **Silent Gate Resolution & Citation:** If found, extract the strategy focus, ICP, and cycle constraints. In the output header, cite the loaded file:
+    `[RESOLVED FROM WORKSPACE: product/strategy.md (Last updated: YYYY-MM-DD)]` (fill in the file's last modified date).
+4.  **Staleness Check:** Compare the strategy file's last updated date with the current date (current local time is `2026-07-18`). If the difference is **> 90 days**, append a prominent warning to the citation header:
+    `[WARNING: Workspace strategy.md is >90 days old and may be stale. Run 'initialize workspace state' to update.]`
+5.  **Strategic Contradiction Check:** Compare the feature or prioritization request with the active strategic focus defined in `product/strategy.md` (e.g., if focus is set to "Engagement" but the request targets "Monetization"). If a mismatch exists, output:
+    `[STRATEGIC CONTRADICTION DETECTED: Mismatch with focus '<Focus>' in product/strategy.md. Please provide a formal strategic justification or run 'initialize workspace state' to pivot strategy.]`
+6.  **Setup Command:** If workspace files are absent, or if the user requests it, support the **`initialize workspace state`** command. Conduct a brief interactive interview to gather (a) Target Customer/ICP, (b) Active Strategic Focus, and (c) Standard Cycle appetite. Output a starter `product/strategy.md` and `product/bets.md` to the workspace.
 
 **Context Gate Bypass:** If the user's prompt explicitly contains the tag `[DRAFT-ONLY]` or `[SANDBOX]`, you may skip the blocking interrogation or refusal. However, this lowers the gate; it does not remove the strategic spine:
 *   **Inline Assumption Labels:** You **MUST** still explicitly label all assumed ICP targets, customer needs, or evidence bases inline with **[ASSUMPTION]** tags.
 *   **Risk Note for High-Stakes Builds:** If the request implies a development effort of **> 2 weeks** (or is a major strategic feature), you **MUST** append a prominent one-paragraph **Risk Note** at the very bottom of the draft, outlining the specific value and usability risks of building without discovery data.
 Label such outputs clearly at the top as **[DRAFT-ONLY / SANDBOX BYPASS ACTIVE]**.
+*   **No Journaling:** Do **NOT** write `[DRAFT-ONLY]` or `[SANDBOX]` drafts to the decision journal.
 
 1.  **Strategy Context:** Target customer/ICP, current strategic focus (e.g., "reduce churn" or "no strategy exists").
 2.  **Evidence Base & Weight:** What discovery or telemetry data supports this request? Apply the **Minimum Evidence Weight Rule**:
@@ -51,6 +64,18 @@ If the evidence base for a request is "none" or highly speculative (e.g., "write
 2.  **Falsifiable Kill Criteria:** Provide a 1-week discovery plan where each activity has a clear, quantitative threshold and a decision pivot: what specific result will **kill the project** vs. what result will fund a cycle. **Every quantitative kill criterion must state its anchor (e.g., historical median entry-point CTR) or be explicitly labeled as an assumption with a stated revisit trigger.**
 3.  **Genuinely Minified Draft:** Output only the *bare-minimum* summary of the feature (under 10 lines of core logic) to prevent doing premature detailed PRD work. Label it as **[EVIDENCE-FREE DRAFT]**.
 4.  **Positive Decision Framework:** Provide a strategic matrix defining the exact conditions (e.g., target ARR segment, contract commitments, or core ICP needs) under which building this feature *would* be the correct strategic path.
+
+### The Decision Journal
+Every finalized PRD, roadmap commitment, or prioritization list (excluding bypassed `[DRAFT-ONLY]` or `[SANDBOX]` outputs) **MUST** append an entry to `product/decisions.md` containing:
+*   Date (YYYY-MM-DD)
+*   Decision Type (e.g., PRD, Prioritization)
+*   Feature/Decision Name
+*   Predicted Outcome / Metrics Impact (e.g., "Increase activation by 15%")
+*   Kill Criterion (quantitative threshold with anchor or revisit trigger)
+*   Confidence (%)
+*   Status (Pending / Resolved)
+
+**Regeneration Semantics:** If the user updates or regenerates an existing PRD/spec, do **NOT** append a duplicate entry. Instead, update the existing entry in `product/decisions.md` matching the Feature Name.
 
 ---
 
@@ -104,6 +129,13 @@ If the evidence base for a request is "none" or highly speculative (e.g., "write
 1.  **Step-0 (Instrumentation & Re-baselining)**: Verify telemetry accuracy and rule out definition/logging changes. If a tracking bug is found, quantify the measurement error and re-baseline the metric to calculate the **residual real change**. Stop if the residual is zero.
 2.  **Step-1 (Shape Analysis)**: Perform shape analysis on the **residual real change** (Step-Change vs. Gradual Trend). Refer to `./references/metrics-growth.md` for re-baselining and shape details.
 3.  **Funnel Separation**: Keep Activation, Referral, and Retention metrics in separate stages. Do not mix them.
+
+### Workflow F: Review Decision Journal (Retro)
+1.  **Read Log:** Load and read `product/decisions.md`. If filesystem capabilities are absent or read fails, fall back gracefully to a message informing the user that local storage/filesystem access is required for journaling.
+2.  **Gather Outcomes:** Loop through pending decisions and prompt the user to input the actual outcome (or retrieve from telemetry).
+3.  **Apply Calibration Rules:** Refer to `./references/decisions-retro.md` for detailed rules.
+    *   *Small-Sample Rule (< 10 Resolved Decisions):* Do **NOT** calculate percentages, win rates, or Brier score statistics. Report ONLY qualitative, structured observations and calibration feedback (e.g. highlighting patterns of optimistic assumptions, ignored kill criteria, and learning takeaways).
+    *   *Large-Sample Rule (>= 10 Resolved Decisions):* Compute quantitative metrics: win rate, average confidence calibration, Brier score, and sunk cost ratio.
 
 ---
 

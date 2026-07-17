@@ -1,7 +1,7 @@
 [![Product Management Agent Skill](./logo-v1.svg)](https://www.skills.sh/rajann44/pm-skills/product-management)
 
 <p align="left">
-  <img src="https://img.shields.io/badge/version-v1.0.3-blue?style=flat-square" alt="Version"/>
+  <img src="https://img.shields.io/badge/version-v1.1.0-blue?style=flat-square" alt="Version"/>
   <img src="https://img.shields.io/badge/skills.sh-compatible-10B981?style=flat-square" alt="skills.sh Compatible"/>
   <img src="https://img.shields.io/badge/license-MIT-58A6FF?style=flat-square" alt="License"/>
   <img src="https://img.shields.io/badge/supports-Claude%20Code%20%7C%20Cursor-D2A8FF?style=flat-square" alt="Compatible Clients"/>
@@ -38,6 +38,7 @@ The entry point of this skill is [SKILL.md](./product-management/SKILL.md), whic
 | **🔍 Customer Discovery** | [discovery.md](./product-management/references/discovery.md) | Continuous Discovery, OSTs, and the Mom Test |
 | **🛠️ Execution & Cycles** | [execution.md](./product-management/references/execution.md) | Shape Up cycle scoping, RICE limits, and hill charts |
 | **📈 Metrics & Growth** | [metrics-growth.md](./product-management/references/metrics-growth.md) | North Stars, Pirate Metrics (AARRR), and step-0/1 checks |
+| **📊 Decision Journal Retro** | [decisions-retro.md](./product-management/references/decisions-retro.md) | Calibration metrics, small-sample qualitative reviews |
 | **⚖️ Methodological Conflicts** | [conflicts.md](./product-management/references/conflicts.md) | Framework decision trees (e.g. Cagan vs. Shape Up) |
 | **📄 Document Templates** | [artifacts-templates.md](./product-management/references/artifacts-templates.md) | PRDs, Opportunity Trees, and Customer Interview guides |
 | **📖 Core Glossary** | [glossary.md](./product-management/references/glossary.md) | 22 canonical product management terms defined |
@@ -82,7 +83,7 @@ Every framework utilized in this skill is synthesized from canonical public prod
 
 ## 🛡️ Validation & Evidence Trail
 
-This skill has been hardened through 10 rigorous validation scenarios:
+This skill has been hardened through 13 rigorous validation scenarios:
 1.  **[Scenario 1: Team Workspaces PRD](./validation/scenario-1.md)** - Applies the Minimum Evidence Weight rule to scale cycle appetites.
 2.  **[Scenario 2: 15% Activation Drop](./validation/scenario-2.md)** - Applies Step-0 telemetry error re-baselining and Step-1 shape analysis.
 3.  **[Scenario 3: B2B Startup Strategy](./validation/scenario-3.md)** - Defines Fintech ICP compliance stress-tests and GLEe exit criteria.
@@ -93,6 +94,9 @@ This skill has been hardened through 10 rigorous validation scenarios:
 8.  **[Scenario 8: Conflicting Evidence](./validation/scenario-8.md)** - Resolves buyer vs. user needs for a $400k ARR feature request.
 9.  **[Scenario 9: Sunk Cost Evaluation](./validation/scenario-9.md)** - Evaluates a failing beta using Ship/Iterate/Kill options under PMF metrics warnings.
 10. **[Scenario 10: Context Gate Bypass &amp; Risk Warning (Adversarial Chatbot)](./validation/scenario-10.md)** - Bypasses the blocking pushback on the Scenario 6 Chatbot request using the `[DRAFT-ONLY]` trigger, verifying that inline `[ASSUMPTION]` labels and the &gt;2 week build Risk Note still survive the bypass.
+11. **[Scenario 11: Silent Gate Resolution](./validation/scenario-11.md)** - Resolves Context Gate silently using loaded workspace strategy files and prepends a header citation.
+12. **[Scenario 12: Decision Journal Calibration Retro](./validation/scenario-12.md)** - Runs Retro workflow on &lt;10 resolved decisions and generates qualitative calibration observations without statistically invalid calculations.
+13. **[Scenario 13: Strategic Mismatch / Contradiction Warning](./validation/scenario-13.md)** - Surfaces a strategic mismatch contradiction warning when a requested feature conflicts with active strategy focus.
 
 *Logs of development gaps, spot-check reports, and before/after diffs are located in the [validation/](./validation/) directory.*
 

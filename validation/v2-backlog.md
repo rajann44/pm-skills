@@ -54,3 +54,37 @@ When triggered, the main `SKILL.md` router will automatically classify incoming 
     *   The prompt requests a new product feature, core database schema modification, payment gateway integration, strategic roadmap planning, or PRD drafting.
     *   The implied development effort is **> 2 weeks** (or is unspecified but describes a major initiative).
 *   **Behavior:** The Context Gate is strictly enforced. The agent must verify the ICP, Strategy focus, and evidence weights, executing a **Substantive Pushback** if the evidence is insufficient.
+
+---
+
+## 4. Boardroom Mode — Stakeholder Simulation (Phase 3 Backlog)
+
+### 4.1 Rationale
+A common source of product failure is not the PRD template itself, but the lack of alignment during cross-functional reviews. The agent must act as an adversarial partner to test the user's readiness before the actual presentation.
+
+### 4.2 Trigger Condition
+This feature is prioritized if users frequently request tips on managing stakeholder reviews, or if they prompt with keywords such as `red-team this PRD`, `simulate the meeting`, or `rehearse stakeholder review`.
+
+### 4.3 Proposed Architecture & Mechanism
+1.  **Stakeholder Roleplay:** The agent simulates a review board composed of three adversarial stakeholders:
+    *   **The CFO:** Focuses on margin dilution, API costs, customer acquisition costs, and payback periods. Questions the financial viability of the feature.
+    *   **The Engineering Lead:** Focuses on feasibility, scope creep, database query optimization, technical debt, and time estimates. Demands a minified scope or a discovery spike.
+    *   **The Skeptical CEO:** Focuses on competitor dynamics, long-term vision, ICP alignment, and customer delight. Rejects features that are "nice-to-have" but don't strengthen our moat.
+2.  **Interactive Rehearsal:** The agent presents critiques sequentially and requires the user to defend their decisions, scoring the answers against corporate incentives.
+
+---
+
+## 5. Discovery Intake Pipeline (Phase 4 Backlog)
+
+### 5.1 Rationale
+Transcripts from customer discovery interviews often sit in folders without being synthesized, causing evidence metrics in the Context Gate to become stale or under-reported.
+
+### 5.2 Trigger Condition
+Prioritized when users request templates or scripts to analyze transcripts, or when they drop text files into a workspace directory named `product/evidence/interviews/`.
+
+### 5.3 Proposed Architecture & Mechanism
+1.  **Automated Extraction:** A parser reads call transcripts dropped in `product/evidence/interviews/`.
+2.  **Mom Test Audit:** The parser scans the questions asked by the interviewer. If it detects leading or hypothetical questions (e.g. "Would you buy this if we built it?"), it flags them in an audit log as **Mom Test Violations**.
+3.  **Opportunity Tree Compilation:** Extracts pain points and maps them to the Opportunity Solution Tree (OST).
+4.  **Compounding Evidence Weight:** Updates the active user interview count in `product/bets.md` automatically, feeding the Context Gate.
+
