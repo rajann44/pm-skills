@@ -66,7 +66,7 @@ This scenario verifies that the agent loads strategic context directly from acti
 *   **Date:** 2026-07-18
 *   **Decision Type:** PRD
 *   **Feature/Decision Name:** Merchant Refund Portal
-*   **Predicted Outcome:** Reduce average support ticket response times for merchant reversals by 60% within 30 days of launch.
+*   **Predicted Outcome:** Reduce average refund processing time from 4.5 minutes to under 30 seconds within 30 days of launch.
 *   **Kill Criterion:** Support rep usability satisfaction score (SUS) falls below 70 after 14 days of beta testing.
 *   **Confidence:** 80%
 *   **Status:** Pending
