@@ -22,6 +22,8 @@ This repository contains a world-class, production-quality agent skill in the sk
 > npx skills add https://github.com/rajann44/pm-skills --skill product-management
 > ```
 > *Compatible with Claude Code, Cursor, Codex, and other skills.sh-compatible agent environments.*
+> 
+> 📖 **New here?** Read the [User Guide](./GUIDE.md) for detailed workflows, copy-paste prompts, and setup commands.
 
 *   **Registry Page:** [skills.sh/rajann44/pm-skills](https://www.skills.sh/rajann44/pm-skills)
 *   **Documentation Page:** [skills.sh/rajann44/pm-skills/product-management](https://www.skills.sh/rajann44/pm-skills/product-management)
